@@ -122,9 +122,6 @@ class GrassEater {
             this.y = newY;
             this.x = newX;
             this.energy += 2;
-
-
-
         }
     }
     mul() {
