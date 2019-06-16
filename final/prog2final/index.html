@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game of Snipe</title>
+	<meta charset="utf8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+	<script src="class.js"></script>
+	<script src="script.js"></script>
+	<style>
+		#legend {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 800px;
+		}
+
+		.legend-color {
+			width: 30px;
+			height: 30px;
+		}
+
+		td {
+			border: 1px solid black;
+			font-size: 14px;
+			padding-left: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>Անվանում</td>
+			<td class="legend-color">գույն</td>
+			<td>տեսադաշտ/շարժվում է</td>
+			<td>ուտում/սպանում է</td>
+			<td>բազմանում է</td>
+			<td>մահանում է</td>
+		</tr>
+		<tr>
+			<td>խոտ</td>
+			<td class="legend-color" style="background-color:green">կանաչ</td>
+			<td>տեսնում է մոտակա 8 վանդակները</td>
+			<td>-</td>
+			<td>ամեն 2 տակտ</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>խոտակեր</td>
+			<td class="legend-color" style="background-color:yellow">դեղին</td>
+			<td>տեսնում է մոտակա 8 վանդակները, շարժվում</td>
+			<td>ուտում է խոտ, էներգիան ավելանում է 2 ով</td>
+			<td>բազմանում է երբ էներգիան դառնում է 8</td>
+			<td>երբ էնէրգիան 0 է դառնում</td>
+		</tr>
+		<tr>
+			<td>գիշատիչ</td>
+			<td class="legend-color" style="background-color:red">կարմիր</td>
+			<td>տեսնում է մոտակա 16 վանդակները, շարժվում</td>
+			<td>ուտում է խոտակեր, էնէրգիան ավելանում է 3</td>
+			<td>բազմանում է երբ էնէրդիան դառնում է 10</td>
+			<td>երբ էնէրգիան 0 է դառնում</td>
+		</tr>
+		<tr>
+			<td>ավտոմեքենա</td>
+			<td class="legend-color" style="background-color:blue">կապույտ</td>
+			<td>տեսնում է իր կողքի 6 վանդակնեևը, շարժվում</td>
+			<td>վրաերթի է ենթարկում խոտը, գիշատիչին, խոտակերին</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>դիպուկահար</td>
+			<td class="legend-color" style="background-color:black"></td>
+			<td>տեսնում է մոտակա 46 վանդակները</td>
+			<td>պատահականության սկզբունքով սպանում է մյուս կերպարներին, 5 տակտը մեկ</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+	</table>
+</body>
+
+</html>
