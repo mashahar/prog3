@@ -1,8 +1,8 @@
 var LivingCreature = require("./LivingCreature")
 var random = require("./random")
 
-module.exports = class Car extends LivingCreature{
-    getNewCoordinates(){
+module.exports = class Car extends LivingCreature {
+    getNewCoordinates() {
         this.directions = [
             [this.x + 1, this.y],
             [this.x + 2, this.y],
@@ -40,10 +40,10 @@ module.exports = class Car extends LivingCreature{
         if (newCell) {
             var newX = newCell[0];
             var newY = newCell[1];
-            if(newCell[0] = 0){
+            if (newCell[0] = 0) {
                 matrix[this.y][this.x] = 0;
             }
-            else if(newCell[0] = 1){
+            else if (newCell[0] = 1) {
                 matrix[this.y][this.x] = 1;
             }
             matrix[newY][newX] = this.index;
@@ -53,8 +53,8 @@ module.exports = class Car extends LivingCreature{
         }
 
     }
-    runOver(){
-        var newcel_p = this.chooseCell(1).concat(this.chooseCell(2),this.chooseCell(3))
+    runOver() {
+        var newcel_p = this.chooseCell(1).concat(this.chooseCell(2), this.chooseCell(3))
         var newCell = random(newcel_p);
 
         if (newCell) {

@@ -17,6 +17,8 @@ carArr = [];
 sniperArr = [];
 matrix = [];
 grassCount = 0;
+grassEaterCount = 0;
+
 //! Setting global arrays  -- END
 
 
@@ -30,27 +32,27 @@ function matrixGenerator(matrixSize, grass, grassEater, grassEaterEater, waterAr
             matrix[i][o] = 0;
         }
     }
-    for (let i = 0; i < grass; i++) {
+    for (let i = 1; i < grass; i++) {
         let customX = Math.floor(random(matrixSize)); // 0-9
         let customY = Math.floor(random(matrixSize)); // 4
         matrix[customY][customX] = 1;
     }
-    for (let i = 0; i < grassEater; i++) {
+    for (let i = 2; i < grassEater; i++) {
         let customX = Math.floor(random(matrixSize));
         let customY = Math.floor(random(matrixSize));
         matrix[customY][customX] = 2;
     }
-    for (let i = 0; i < grassEaterEater; i++) {
+    for (let i = 0; i < carnivore; i++) {
         let customX = Math.floor(random(matrixSize));
         let customY = Math.floor(random(matrixSize));
         matrix[customY][customX] = 3;
     }
-    for (let i = 0; i < waterArr; i++) {
+    for (let i = 0; i < car; i++) {
         let customX = Math.floor(random(matrixSize));
         let customY = Math.floor(random(matrixSize));
         matrix[customY][customX] = 4;
     }
-    for (let i = 0; i < fireArr; i++) {
+    for (let i = 0; i < sniper; i++) {
         let customX = Math.floor(random(matrixSize));
         let customY = Math.floor(random(matrixSize));
         matrix[customY][customX] = 5;
@@ -81,7 +83,7 @@ function creatingObjects() {
             if (matrix[y][x] == 2) {
                 var grassEater = new GrassEater(x, y);
                 grassEaterArr.push(grassEater);
-            } 
+            }
             else if (matrix[y][x] == 1) {
                 var grass = new Grass(x, y);
                 grassArr.push(grass);
@@ -101,7 +103,7 @@ function creatingObjects() {
             }
             else if (matrix[y][x] == 5) {
                 var sniper = new Sniper(x, y);
-                carArr.push(sniper);
+                sniperArr.push(sniper);
             }
         }
     }
