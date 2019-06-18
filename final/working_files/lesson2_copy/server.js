@@ -2,9 +2,9 @@
 //! Requiring modules  --  START
 var Grass = require("./modules/grass.js");
 var GrassEater = require("./modules/grassEater.js");
-var carnivore = require("./modules/carnivore.js");
-var car = require("./modules/car.js");
-var sniper = require("./modules/sniper.js");
+var Carnivore = require("./modules/carnivore.js");
+var Car = require("./modules/car.js");
+var Sniper = require("./modules/sniper.js");
 let random = require('./modules/random');
 //! Requiring modules  --  END
 
